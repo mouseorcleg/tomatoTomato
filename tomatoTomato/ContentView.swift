@@ -9,8 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            Text("There will be a list of tasks here later")
+
+            .navigationBarTitle("To do:")
+            .navigationBarItems(trailing:
+                Button(action: {
+                    print("You pressed the add button. Yeee!")
+                }) {
+                    Image(systemName: "plus").imageScale(.large)
+                }
+                .accessibilityLabel("New Task")
+            )
+        }
     }
 }
 
