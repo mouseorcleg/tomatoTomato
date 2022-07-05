@@ -19,6 +19,7 @@
 		CB3686C128744AE200E1CFC4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CB3686C328744AEA00E1CFC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB3686C628744AEA00E1CFC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CB3686CD28744E0D00E1CFC4 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +36,7 @@
 		CB3686B328744AE200E1CFC4 = {
 			isa = PBXGroup;
 			children = (
+				CB3686CD28744E0D00E1CFC4 /* README.txt */,
 				CB3686BE28744AE200E1CFC4 /* tomatoTomato */,
 				CB3686BD28744AE200E1CFC4 /* Products */,
 			);
