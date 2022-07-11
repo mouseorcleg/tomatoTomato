@@ -11,16 +11,16 @@ struct ContentView: View {
     
     @State private var isPresentingNewTaskView = false
     
+    func actionForPlusButton() {
+        isPresentingNewTaskView = true
+    }
+    
     var body: some View {
         NavigationView {
             Text("There will be a list of tasks here later")
-
             .navigationBarTitle("To do:")
-            
             .toolbar {
-                Button(action: {
-                    isPresentingNewTaskView = true
-                }) {
+                Button(action: actionForPlusButton) {
                     Image(systemName: "plus").imageScale(.large)
                 }
                 .accessibilityLabel("New Task")

@@ -14,8 +14,7 @@ struct NewTaskView: View {
             Section(header: Text("Name your field")) {
             Text("Fields under constraction")
             }
-            .navigationTitle(Text("New task"))
-
+            .navigationTitle(NSLocalizedString("New task", comment: "New task title"))
         }
     }
 }
