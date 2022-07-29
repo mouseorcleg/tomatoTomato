@@ -11,6 +11,7 @@
 		CB3686C228744AE200E1CFC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3686C128744AE200E1CFC4 /* ContentView.swift */; };
 		CB3686C428744AEA00E1CFC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB3686C328744AEA00E1CFC4 /* Assets.xcassets */; };
 		CB3686C728744AEA00E1CFC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB3686C628744AEA00E1CFC4 /* Preview Assets.xcassets */; };
+		CB3686D328749E3700E1CFC4 /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3686D228749E3600E1CFC4 /* NewTaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		CB3686C128744AE200E1CFC4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CB3686C328744AEA00E1CFC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB3686C628744AEA00E1CFC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CB3686CD28744E0D00E1CFC4 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		CB3686D228749E3600E1CFC4 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 		CB3686B328744AE200E1CFC4 = {
 			isa = PBXGroup;
 			children = (
+				CB3686CD28744E0D00E1CFC4 /* README.txt */,
 				CB3686BE28744AE200E1CFC4 /* tomatoTomato */,
 				CB3686BD28744AE200E1CFC4 /* Products */,
 			);
@@ -53,6 +57,7 @@
 			children = (
 				CB3686BF28744AE200E1CFC4 /* tomatoTomatoApp.swift */,
 				CB3686C128744AE200E1CFC4 /* ContentView.swift */,
+				CB3686D228749E3600E1CFC4 /* NewTaskView.swift */,
 				CB3686C328744AEA00E1CFC4 /* Assets.xcassets */,
 				CB3686C528744AEA00E1CFC4 /* Preview Content */,
 			);
@@ -137,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB3686D328749E3700E1CFC4 /* NewTaskView.swift in Sources */,
 				CB3686C228744AE200E1CFC4 /* ContentView.swift in Sources */,
 				CB3686C028744AE200E1CFC4 /* tomatoTomatoApp.swift in Sources */,
 			);
