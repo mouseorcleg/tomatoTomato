@@ -14,6 +14,14 @@ struct NewTaskView: View {
         Form {
             Section(header: Text("New task", comment: "New task title")) {
                 TextField(NSLocalizedString("Title", comment: "Task title hint"), text: $data.title)
+                Picker("Size of the task", selection: $data.size) {
+                    Text("XS").tag(1)
+                    Text("S").tag(2)
+                    Text("M").tag(3)
+                    Text("L").tag(4)
+                    Text("Xl").tag(5)
+                }
+                .pickerStyle(.segmented)
             }
         }
     }
