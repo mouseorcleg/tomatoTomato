@@ -27,6 +27,7 @@
 		CBECACF72895963F00160A4C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CBECACF92895964100160A4C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CBECACFB2895965000160A4C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = "ru.lproj/tomatoTomato-InfoPlist.strings"; sourceTree = "<group>"; };
+		CBECACFD2895A0F900160A4C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/tomatoTomato-InfoPlist.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +175,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CBECACFB2895965000160A4C /* ru */,
+				CBECACFD2895A0F900160A4C /* en */,
 			);
 			name = "tomatoTomato-InfoPlist.strings";
 			path = tomatoTomato;
