@@ -11,10 +11,11 @@ struct NewTaskView: View {
     @Binding var data: TaskData
     
     var body: some View {
+        HStack{
         Form {
             Section(header: Text("New task", comment: "New task title")) {
                 TextField(NSLocalizedString("Title", comment: "Task title hint"), text: $data.title)
-                Picker("Size of the task", selection: $data.size) {
+                Picker(selection: $data.size, label: Text("Size of the task")) {
                     Text("XS").tag(1)
                     Text("S").tag(2)
                     Text("M").tag(3)
@@ -22,7 +23,19 @@ struct NewTaskView: View {
                     Text("Xl").tag(5)
                 }
                 .pickerStyle(.segmented)
+            Picker(selection: $data.type, label: Text("Task type")){
+                Text("Mail")
+                Text("Develope")
+                Text("Launch")
+                Text("Meet")
+                Text("Plan")
+                Text("Research")
+                Text("Review")
+                Text("Test")
             }
+            .pickerStyle(.menu)
+            }
+        }
         }
     }
 }
