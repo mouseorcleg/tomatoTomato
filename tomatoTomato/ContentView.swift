@@ -36,6 +36,11 @@ struct ContentView: View {
                                     Image(systemName: "arrow.backward").imageScale(.large)
                                 }
                             }
+                            ToolbarItem(placement: .confirmationAction) {
+                                Button("Save") {
+                                    print("Save tapped!")
+                                }
+                            }
                         }
                 }
             }

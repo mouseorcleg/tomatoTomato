@@ -20,7 +20,7 @@ struct NewTaskView: View {
                     Text("S").tag(2)
                     Text("M").tag(3)
                     Text("L").tag(4)
-                    Text("Xl").tag(5)
+                    Text("XL").tag(5)
                 }
                 .pickerStyle(.segmented)
             Picker(selection: $data.type, label: Text("Task type")){
