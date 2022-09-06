@@ -27,7 +27,7 @@ struct ContentView: View {
             }
             .sheet(isPresented: $isPresentingNewTaskView) {
                 NavigationView {
-                    NewTaskView()
+                    NewTaskView(data: .constant(TaskData.sampleData[0]))
                         .toolbar {
                             ToolbarItem(placement: .cancellationAction) {
                                 Button(action: {
