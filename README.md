@@ -6,11 +6,18 @@ To do list with integrated Pomodoro Technique* made in Xcode 14 using Swift UI, 
 
 ## Table of contents
 
-
+* [Main idea](#main-idea)
+* [How it works](#how-it-works)
+* [Build status](#build-status)
+* [A few screenshots](#a-few-screenshots)
+* [Technologies](#technologies)
+* [Setup](#setup)
 
 ## Main idea
 TomatoTomato is designed to help people to track their time at work.
+
 Our target audience is people who just started an IT (or IT-like) job.
+
 I hope to start using it myself when it’s ready :)
 
 ## How it works
@@ -20,6 +27,7 @@ In version 2.0 we plan to add a feature with prediction of how many «tomatoes»
 
 ## Build status
 For now project has a part UI for main pages & we are working on database (SQLite). We have 8 more milestones to go trough including but not limited to errors handling and unit tests.
+
 Our estimate - the app will be up and running before Christmas 🎄
 
 ## A few screenshots
@@ -40,4 +48,5 @@ Project is created with:
 ## Setup
 To run this project, install it locally using Xcode and you should
 be good :)
+
 Do drop me a message if it’s not the case.
