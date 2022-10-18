@@ -2,7 +2,7 @@
 
 To do list with integrated Pomodoro Technique* made in Xcode 14 using Swift UI, SQLite and a lot of my brain cells.
 
- *check it out if you unfamiliar with it: [The Pomodoro® Technique | Cirillo Consulting GmbH](https://francescocirillo.com/products/the-pomodoro-technique)).
+ *check it out if you unfamiliar with it: [The Pomodoro® Technique | Cirillo Consulting GmbH](https://francescocirillo.com/products/the-pomodoro-technique).
 
 ## Table of contents
 
