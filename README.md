@@ -43,7 +43,7 @@ Our estimate - the app will be up and running before Christmas 🎄
 Project is created with:
 * Xcode version: 14.0.1
 * SQLite version: 3.39.4
-* Guidance & code reviews by da best mentor @togramago
+* Guidance & code reviews by da best mentor [@togramago](https://github.com/togramago)
 
 ## Setup
 To run this project, install it locally using Xcode and you should
