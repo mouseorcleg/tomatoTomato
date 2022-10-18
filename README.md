@@ -25,11 +25,11 @@ Our estimate - the app will be up and running before Christmas 🎄
 ## A few screenshots
 ### How app looks right now
 
-[image:63DEEE9C-FAA8-4574-8382-E5516F602008-431-00004F4BCB5796D8/Screenshot tomato.png]
+<img width="1167" alt="Screenshot tomato" src="https://user-images.githubusercontent.com/45575272/196437076-1665ee0b-9943-40c3-af22-dc87ea4b094c.png">
 
 ### How it will look in the future
 
-[image:FB254043-78E8-442A-903C-FD2CA2E90CBE-431-00004EA8B9EDD688/S6fOtGr8rZ9YyU_XED3xjdvzjNnFa51t7Cnsqh10gzTxu12uCX7djIltM8UV8ww0oDG24enmWK94ql237QuYLhSrY1XcykmGOGcwPUKEvwRZyAqrjeVzTPbrlWAjQslHuiDoGv_MLCJCaUXcwJp7iRGxGF-txtOkzSYp8gEHb-AUUEmtAFPq8wDYwPOq.png]
+<img width="1168" alt="Future look" src="https://user-images.githubusercontent.com/45575272/196436981-e4bcab01-d3c6-4706-a55e-a67cca5d9327.png">
 
 ## Technologies
 Project is created with:
