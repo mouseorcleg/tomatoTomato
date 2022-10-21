@@ -15,6 +15,8 @@ struct ContentView: View {
         isPresentingNewTaskView = true
     }
     
+    @State private var presentingConfirmationDialog: Bool = false
+    
     var body: some View {
         NavigationView {
             Text("There will be a list of tasks here later")
@@ -30,18 +32,25 @@ struct ContentView: View {
                     NewTaskView(data: .constant(TaskData.sampleData[0]))
                         .toolbar {
                             ToolbarItem(placement: .cancellationAction) {
-                                Button(action: {
-                                    isPresentingNewTaskView = false
+                                Button(role: .cancel, action: {
+                                    presentingConfirmationDialog = true
                                 }) {
                                     Image(systemName: "arrow.backward").imageScale(.large)
                                 }
                             }
+                            
                             ToolbarItem(placement: .confirmationAction) {
                                 Button("Save") {
                                     print("Save tapped!")
                                 }
                             }
                         }
+                        .confirmationDialog("", isPresented: $presentingConfirmationDialog) {
+                          Button("Discard Changes", role: .destructive, action: {
+                              isPresentingNewTaskView = false })
+                          Button("Cancel", role: .cancel, action: {
+                              isPresentingNewTaskView = true })
+                    }
                 }
             }
         }
