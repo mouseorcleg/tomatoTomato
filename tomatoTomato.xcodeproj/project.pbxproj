@@ -13,6 +13,7 @@
 		CB3686C728744AEA00E1CFC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB3686C628744AEA00E1CFC4 /* Preview Assets.xcassets */; };
 		CB3686D328749E3700E1CFC4 /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3686D228749E3600E1CFC4 /* NewTaskView.swift */; };
 		CB3FF734290FF290007B3579 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = CB3FF733290FF290007B3579 /* GRDB */; };
+		CB3FF737291017FF007B3579 /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3FF736291017FF007B3579 /* AppDatabase.swift */; };
 		CBECACF62895963F00160A4C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBECACF82895963F00160A4C /* Localizable.strings */; };
 		CBECACFC2895965000160A4C /* tomatoTomato-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBECACFA2895965000160A4C /* tomatoTomato-InfoPlist.strings */; };
 		CBECAD032895A8FC00160A4C /* taskData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBECAD022895A8FC00160A4C /* taskData.swift */; };
@@ -26,6 +27,7 @@
 		CB3686C628744AEA00E1CFC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CB3686CD28744E0D00E1CFC4 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		CB3686D228749E3600E1CFC4 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
+		CB3FF736291017FF007B3579 /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
 		CBECACF72895963F00160A4C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CBECACF92895964100160A4C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CBECACFB2895965000160A4C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = "ru.lproj/tomatoTomato-InfoPlist.strings"; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		CB3686BE28744AE200E1CFC4 /* tomatoTomato */ = {
 			isa = PBXGroup;
 			children = (
+				CB3FF735291017B4007B3579 /* Database */,
 				CBECACFE2895A89600160A4C /* Models */,
 				CB3686BF28744AE200E1CFC4 /* tomatoTomatoApp.swift */,
 				CB3686C128744AE200E1CFC4 /* ContentView.swift */,
@@ -83,6 +86,14 @@
 				CB3686C628744AEA00E1CFC4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CB3FF735291017B4007B3579 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				CB3FF736291017FF007B3579 /* AppDatabase.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		CBECACFE2895A89600160A4C /* Models */ = {
@@ -176,6 +187,7 @@
 				CB3686C228744AE200E1CFC4 /* ContentView.swift in Sources */,
 				CBECAD032895A8FC00160A4C /* taskData.swift in Sources */,
 				CB3686C028744AE200E1CFC4 /* tomatoTomatoApp.swift in Sources */,
+				CB3FF737291017FF007B3579 /* AppDatabase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
