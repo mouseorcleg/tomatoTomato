@@ -29,12 +29,12 @@ final class AppDatabase {
         #endif
         
         // Create a table
-        migrator.registerMigration("createTask") { db in
+        migrator.registerMigration("createTasks") { db in
             
-            try db.create(table: "task") { t in
+            try db.create(table: "Tasks") { t in
                 t.autoIncrementedPrimaryKey("id")
                 t.column("title", .text).notNull()
-                t.column("size", .text).defaults(to: "S")
+                t.column("size", .integer).defaults(to: "2")
                 t.column("type", .text).defaults(to: "Mail")
                 
             }
@@ -43,4 +43,3 @@ final class AppDatabase {
         return migrator
     }
 }
-
