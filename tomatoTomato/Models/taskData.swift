@@ -6,14 +6,15 @@
 //
 
 import Foundation
+import GRDB
 
-struct TaskData: Identifiable, Codable {
-    let id: UUID
+struct TaskData: Identifiable, Hashable {
+    var id: Int64?
     var title: String
     var size: Int
     var type: String
     
-    init(id: UUID = UUID(), title: String, size: Int, type: String) {
+    init(id: Int64?, title: String, size: Int, type: String) {
         self.id = id
         self.title = title
         self.size = size
@@ -21,29 +22,35 @@ struct TaskData: Identifiable, Codable {
     }
 }
 
+//Creates a new task
 extension TaskData {
-    struct Data {
-        var title: String = ""
-        var size: Int = 1
-        var type: String = ""
-    }
-
-    var data: Data {
-        Data(title: title, size: Int(size), type: type)
-    }
-    
-    init(data: Data) {
-        id = UUID()
-        title = data.title
-        size = Int(data.size)
-        type = data.type
+    static func new() -> TaskData {
+        TaskData(id: nil, title: "", size: 2, type: "Mail")
     }
 }
 
+// Makes TaskData a Codable Record.
+
+extension TaskData: Codable, FetchableRecord, MutablePersistableRecord {
+    
+    fileprivate enum Columns {
+        static let title = Column(CodingKeys.title)
+        static let size = Column(CodingKeys.size)
+        static let type = Column(CodingKeys.type)
+    }
+    
+    mutating func didInsert(_ inserted: InsertionSuccess) {
+        id = inserted.rowID
+    }
+}
+
+
+
+
 extension TaskData {
-    static let sampleData: [TaskData] =
+    static var sampleData: [TaskData] =
     [
-        TaskData(title: "", size: 1, type: "Mail"),
-        TaskData(title: "Finish your code", size: 5, type: "Develop")
+        TaskData(id: 1, title: "", size: 1, type: "Mail"),
+        TaskData(id: 2, title: "Finish your code", size: 5, type: "Develop")
     ]
 }

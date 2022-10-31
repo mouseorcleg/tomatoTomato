@@ -31,7 +31,7 @@ final class AppDatabase {
         // Create a table
         migrator.registerMigration("createTasks") { db in
             
-            try db.create(table: "Tasks") { t in
+            try db.create(table: "taskData") { t in
                 t.autoIncrementedPrimaryKey("id")
                 t.column("title", .text).notNull()
                 t.column("size", .integer).defaults(to: "2")
