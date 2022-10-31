@@ -14,6 +14,7 @@
 		CB3686D328749E3700E1CFC4 /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3686D228749E3600E1CFC4 /* NewTaskView.swift */; };
 		CB3FF734290FF290007B3579 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = CB3FF733290FF290007B3579 /* GRDB */; };
 		CB3FF737291017FF007B3579 /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3FF736291017FF007B3579 /* AppDatabase.swift */; };
+		CB3FF73929103556007B3579 /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3FF73829103556007B3579 /* Persistance.swift */; };
 		CBECACF62895963F00160A4C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBECACF82895963F00160A4C /* Localizable.strings */; };
 		CBECACFC2895965000160A4C /* tomatoTomato-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBECACFA2895965000160A4C /* tomatoTomato-InfoPlist.strings */; };
 		CBECAD032895A8FC00160A4C /* taskData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBECAD022895A8FC00160A4C /* taskData.swift */; };
@@ -28,6 +29,7 @@
 		CB3686CD28744E0D00E1CFC4 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		CB3686D228749E3600E1CFC4 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
 		CB3FF736291017FF007B3579 /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
+		CB3FF73829103556007B3579 /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
 		CBECACF72895963F00160A4C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CBECACF92895964100160A4C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CBECACFB2895965000160A4C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = "ru.lproj/tomatoTomato-InfoPlist.strings"; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				CB3FF736291017FF007B3579 /* AppDatabase.swift */,
+				CB3FF73829103556007B3579 /* Persistance.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				CBECAD032895A8FC00160A4C /* taskData.swift in Sources */,
 				CB3686C028744AE200E1CFC4 /* tomatoTomatoApp.swift in Sources */,
 				CB3FF737291017FF007B3579 /* AppDatabase.swift in Sources */,
+				CB3FF73929103556007B3579 /* Persistance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
