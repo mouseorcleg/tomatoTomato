@@ -44,13 +44,22 @@ extension TaskData: Codable, FetchableRecord, MutablePersistableRecord {
     }
 }
 
+// A few queries to the db that we will need in the future
 
-
+extension DerivableRequest<TaskData> {
+    
+    func orderedBySize() -> Self {
+        // Sort by descending size of the task
+        
+        order(
+            TaskData.Columns.size.desc)
+    }
+}
 
 extension TaskData {
     static var sampleData: [TaskData] =
     [
-        TaskData(id: 1, title: "", size: 1, type: "Mail"),
+        TaskData(id: 1, title: "", size: 2, type: "Mail"),
         TaskData(id: 2, title: "Finish your code", size: 5, type: "Develop")
     ]
 }
