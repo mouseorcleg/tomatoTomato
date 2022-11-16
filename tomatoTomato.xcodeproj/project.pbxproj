@@ -52,9 +52,9 @@
 		CB3686B328744AE200E1CFC4 = {
 			isa = PBXGroup;
 			children = (
+				CB3686CD28744E0D00E1CFC4 /* README.txt */,
 				CBECACFA2895965000160A4C /* tomatoTomato-InfoPlist.strings */,
 				CBECACF82895963F00160A4C /* Localizable.strings */,
-				CB3686CD28744E0D00E1CFC4 /* README.txt */,
 				CB3686BE28744AE200E1CFC4 /* tomatoTomato */,
 				CB3686BD28744AE200E1CFC4 /* Products */,
 			);

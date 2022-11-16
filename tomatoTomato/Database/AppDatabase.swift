@@ -43,3 +43,52 @@ final class AppDatabase {
         return migrator
     }
 }
+
+// write into db
+
+extension AppDatabase {
+    
+    func saveTask(_ taskData: inout TaskData) throws {
+        try dbWriter.write { db in
+            try taskData.save(db)
+        }
+    }
+    
+    
+    func deleteTasks(ids: [Int64]) throws {
+        try dbWriter.write { db in
+            _ = try taskData.deleteAll(db, ids: ids)
+        }
+    }
+    
+    
+    func deleteAllTaska() throws {
+        try dbWriter.write { db in
+            _ = try taskData.deleteAll(db)
+        }
+    }
+    
+    
+    func createRandomTasksIfEmpty() throws {
+        try dbWriter.write { db in
+            if try TaskData.all().isEmpty(db) {
+                try createRandomTasks(db)
+            }
+        }
+    }
+    
+    
+    private func createRandomTasks(_ db: Database) throws {
+        for _ in 0..<8 {
+            _ = try Player.makeRandom().inserted(db) // insert but ignore inserted id
+        }
+    }
+}
+
+// Reading without editing for db
+extension AppDatabase {
+    
+    var databaseReader: DatabaseReader {
+        dbWriter
+    }
+}
