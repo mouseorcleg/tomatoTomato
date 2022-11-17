@@ -39,7 +39,15 @@ static func randomTitle() -> String {
     titles.randomElement()!
 }
 
-//
+// returns a random size
+
+static func randomSize() -> Int {
+    Int.random(in: 1...5)
+}
+
+static func randomType() -> String {
+    types.randomElement()!
+}
 
 
 // Random task creation - for debug & demo purpose
@@ -47,6 +55,9 @@ static func randomTitle() -> String {
 extension TaskData {
     private static let titles = [
         "Take a nap", "Go for a walk", "Try meditation", "Netflix & tea", "Yoga practice", "Make yourself a nice cup of tea", "Plan a weekend in museums", "Meet a friend for coffee", "Hug your favorite person", "Pet a dog", "Compliment some stranger", "Listen to ypur favorite music", "Read a book for 15 min", "Bye a tickets to Opera", "Go for dogwathing"
+    ]
+    private static let types = [
+        "Mail", "Develope", "Launch", "Meet", "Plan", "Research", "Review", "Test"
     ]
 }
 
