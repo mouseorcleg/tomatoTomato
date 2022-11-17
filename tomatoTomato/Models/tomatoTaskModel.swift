@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct tomatoTaskModel: Codable {
-    let id: Int64?
-    let title: String
-    let size: TomatoSize
-    let type: TomatoType
-}
+//struct tomatoTaskModel: Codable {
+//    let id: Int64?
+//    let title: String
+//    let size: TomatoSize
+//    let type: TomatoType
+//}
 
 enum TomatoType: String, Codable {
     case mail
@@ -29,7 +29,7 @@ enum TomatoType: String, Codable {
        }
 }
 
-enum TomatoSize: String, Codable {
+enum TomatoSize: String, CaseIterable, Codable {
     case XS
     case S
     case M

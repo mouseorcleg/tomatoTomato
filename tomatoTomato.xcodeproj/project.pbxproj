@@ -79,14 +79,12 @@
 		CB3686BE28744AE200E1CFC4 /* tomatoTomato */ = {
 			isa = PBXGroup;
 			children = (
+				CBEC8B7729269AD0007BB344 /* NewTask */,
 				CB3FF735291017B4007B3579 /* Database */,
 				CBECACFE2895A89600160A4C /* Models */,
 				CB3686BF28744AE200E1CFC4 /* tomatoTomatoApp.swift */,
 				CB3686C128744AE200E1CFC4 /* ContentView.swift */,
 				CBE3813329267AA0003E5B5E /* ContentViewController.swift */,
-				CB3686D228749E3600E1CFC4 /* NewTaskView.swift */,
-				CBE3813729267DA6003E5B5E /* NewTaskViewModel.swift */,
-				CBE3813129265E6B003E5B5E /* NewTaskViewContoller.swift */,
 				CB3686C328744AEA00E1CFC4 /* Assets.xcassets */,
 				CB3686C528744AEA00E1CFC4 /* Preview Content */,
 			);
@@ -109,6 +107,16 @@
 				CBECAD022895A8FC00160A4C /* tomatoTaskDbModel.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		CBEC8B7729269AD0007BB344 /* NewTask */ = {
+			isa = PBXGroup;
+			children = (
+				CB3686D228749E3600E1CFC4 /* NewTaskView.swift */,
+				CBE3813729267DA6003E5B5E /* NewTaskViewModel.swift */,
+				CBE3813129265E6B003E5B5E /* NewTaskViewContoller.swift */,
+			);
+			path = NewTask;
 			sourceTree = "<group>";
 		};
 		CBECACFE2895A89600160A4C /* Models */ = {
