@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NewTaskView: View {
-    @Binding var data: tomatoTaskDbModel
+    @State var data: tomatoTaskDbModel
     
     var body: some View {
         HStack{
@@ -42,6 +42,8 @@ struct NewTaskView: View {
 
 struct NewTaskView_Previews: PreviewProvider {
     static var previews: some View {
-        NewTaskView(data: .constant(tomatoTaskDbModel.sampleData[0]))
+        NewTaskView(data:
+                .new()
+        )
     }
 }
