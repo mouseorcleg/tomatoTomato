@@ -57,21 +57,21 @@ extension AppDatabase {
     
     func deleteTasks(ids: [Int64]) throws {
         try dbWriter.write { db in
-            _ = try tomatoTask.deleteAll(db, ids: ids)
+            _ = try tomatoTaskDbModel.deleteAll(db, ids: ids)
         }
     }
     
     
     func deleteAllTaska() throws {
         try dbWriter.write { db in
-            _ = try tomatoTask.deleteAll(db)
+            _ = try tomatoTaskDbModel.deleteAll(db)
         }
     }
     
     
     func createRandomTasksIfEmpty() throws {
         try dbWriter.write { db in
-            if try tomatoTask.all().isEmpty(db) {
+            if try tomatoTaskDbModel.all().isEmpty(db) {
                 try createRandomTasks(db)
             }
         }
@@ -80,7 +80,7 @@ extension AppDatabase {
     
     private func createRandomTasks(_ db: Database) throws {
         for _ in 0..<8 {
-            _ = try tomatoTask.makeRandom().inserted(db) // insert but ignore inserted id
+            _ = try tomatoTaskDbModel.makeRandom().inserted(db) // insert but ignore inserted id
         }
     }
 }
