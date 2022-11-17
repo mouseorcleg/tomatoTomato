@@ -31,7 +31,7 @@ final class AppDatabase {
         // Create a table
         migrator.registerMigration("createTasks") { db in
             
-            try db.create(table: "taskData") { t in
+            try db.create(table: "tomatoTask") { t in
                 t.autoIncrementedPrimaryKey("id")
                 t.column("title", .text).notNull()
                 t.column("size", .integer).defaults(to: "2")
@@ -48,30 +48,30 @@ final class AppDatabase {
 
 extension AppDatabase {
     
-    func saveTask(_ taskData: inout TaskData) throws {
+    func saveTask(_ tomatoTask: inout tomatoTaskDbModel) throws {
         try dbWriter.write { db in
-            try taskData.save(db)
+            try tomatoTask.save(db)
         }
     }
     
     
     func deleteTasks(ids: [Int64]) throws {
         try dbWriter.write { db in
-            _ = try taskData.deleteAll(db, ids: ids)
+            _ = try tomatoTask.deleteAll(db, ids: ids)
         }
     }
     
     
     func deleteAllTaska() throws {
         try dbWriter.write { db in
-            _ = try taskData.deleteAll(db)
+            _ = try tomatoTask.deleteAll(db)
         }
     }
     
     
     func createRandomTasksIfEmpty() throws {
         try dbWriter.write { db in
-            if try TaskData.all().isEmpty(db) {
+            if try tomatoTask.all().isEmpty(db) {
                 try createRandomTasks(db)
             }
         }
@@ -80,7 +80,7 @@ extension AppDatabase {
     
     private func createRandomTasks(_ db: Database) throws {
         for _ in 0..<8 {
-            _ = try Player.makeRandom().inserted(db) // insert but ignore inserted id
+            _ = try tomatoTask.makeRandom().inserted(db) // insert but ignore inserted id
         }
     }
 }

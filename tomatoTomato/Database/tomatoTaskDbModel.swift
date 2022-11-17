@@ -1,5 +1,5 @@
 //
-//  taskData.swift
+//  tomatoTaskDbModel.swift
 //  tomatoTomato
 //
 //  Created by Maria Kharybina on 30.07.22.
@@ -8,7 +8,7 @@
 import Foundation
 import GRDB
 
-struct TaskData: Identifiable, Hashable {
+struct tomatoTaskDbModel: Identifiable, Hashable {
     var id: Int64?
     var title: String
     var size: Int
@@ -23,36 +23,35 @@ struct TaskData: Identifiable, Hashable {
 }
 
 // Creates a new task with empty title
-extension TaskData {
-    static func new() -> TaskData {
-        TaskData(id: nil, title: "", size: 2, type: "Mail")
+extension tomatoTaskDbModel {
+    static func new() -> tomatoTaskDbModel {
+        tomatoTaskDbModel(id: nil, title: "", size: 2, type: "Mail")
+    }
+    
+    // Creates a new task with random parameters
+    static func makeRandom() -> tomatoTaskDbModel {
+        tomatoTaskDbModel(id: nil, title: randomTitle(), size: randomSize(), type: randomType())
+    }
+    
+    // returns a random title
+    static func randomTitle() -> String {
+        titles.randomElement()!
+    }
+    
+    // returns a random size
+    
+    static func randomSize() -> Int {
+        Int.random(in: 1...5)
+    }
+    
+    static func randomType() -> String {
+        types.randomElement()!
     }
 }
 
-// Creates a new task with random parameters
-static func makeRandom() -> TaskData {
-    TaskData(id: nil, name: randomTitle(), size: randomSize(), type: randomType())
-}
-
-// returns a random title
-static func randomTitle() -> String {
-    titles.randomElement()!
-}
-
-// returns a random size
-
-static func randomSize() -> Int {
-    Int.random(in: 1...5)
-}
-
-static func randomType() -> String {
-    types.randomElement()!
-}
-
-
 // Random task creation - for debug & demo purpose
 
-extension TaskData {
+extension tomatoTaskDbModel {
     private static let titles = [
         "Take a nap", "Go for a walk", "Try meditation", "Netflix & tea", "Yoga practice", "Make yourself a nice cup of tea", "Plan a weekend in museums", "Meet a friend for coffee", "Hug your favorite person", "Pet a dog", "Compliment some stranger", "Listen to ypur favorite music", "Read a book for 15 min", "Bye a tickets to Opera", "Go for dogwathing"
     ]
@@ -61,9 +60,9 @@ extension TaskData {
     ]
 }
 
-// Makes TaskData a Codable Record.
+// Makes tomatoTaskDbModel a Codable Record.
 
-extension TaskData: Codable, FetchableRecord, MutablePersistableRecord {
+extension tomatoTaskDbModel: Codable, FetchableRecord, MutablePersistableRecord {
     
     fileprivate enum Columns {
         static let title = Column(CodingKeys.title)
@@ -78,20 +77,20 @@ extension TaskData: Codable, FetchableRecord, MutablePersistableRecord {
 
 // A few queries to the db that we will need in the future
 
-extension DerivableRequest<TaskData> {
+extension DerivableRequest<tomatoTaskDbModel> {
     
     func orderedBySize() -> Self {
         // Sort by descending size of the task
         
         order(
-            TaskData.Columns.size.desc)
+            tomatoTaskDbModel.Columns.size.desc)
     }
 }
 
-extension TaskData {
-    static var sampleData: [TaskData] =
+extension tomatoTaskDbModel {
+    static var sampleData: [tomatoTaskDbModel] =
     [
-        TaskData(id: 1, title: "", size: 2, type: "Mail"),
-        TaskData(id: 2, title: "Finish your code", size: 5, type: "Develop")
+        tomatoTaskDbModel(id: 1, title: "", size: 2, type: "Mail"),
+        tomatoTaskDbModel(id: 2, title: "Finish your code", size: 5, type: "Develop")
     ]
 }
