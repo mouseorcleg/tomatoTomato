@@ -12,22 +12,29 @@ struct NewTaskView: View {
     
     var body: some View {
         HStack{
-        Form {
-            Section(header: Text("New task", comment: "New task title")) {
-                TextField(NSLocalizedString("Title", comment: "Task title hint"), text: $viewModel.title)
-//                Picker(selection: $sizeSelection, label: Text("Size of the task")) {
-//                    ForEach(TomatoSize.allCases) { i in
-//                        Text($TomatoSize.name), systemImage: "mark")
-//                            .padding(4)
-//                    }
-//                }
-//                .pickerStyle(.segmented)
-//            Picker(selection: viewModel.type, label: Text("Task type")){
-//
-//            }
-//            .pickerStyle(.menu)
+            Form {
+                Section(header: Text("New task", comment: "New task title")) {
+                
+                    TextField(NSLocalizedString("Title", comment: "Task title hint"), text: $viewModel.title)
+                    .padding(3)
+                
+                    Picker("Size", selection: $viewModel.size) {
+                        ForEach(TomatoSize.allCases, id: \.self) { size in
+                        Text(size.name).tag(size)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    .padding(3)
+
+                    Picker("Type", selection: $viewModel.type) {
+                        ForEach(TomatoType.allCases, id: \.self) { type in
+                        Text(type.name).tag(type)
+                        }
+                    }
+                    .pickerStyle(.menu)
+                    .padding(3)
+                }
             }
-        }
         }
     }
 }
