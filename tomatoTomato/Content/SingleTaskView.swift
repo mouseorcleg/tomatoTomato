@@ -14,20 +14,25 @@ struct SingleTaskView: View {
             HStack{
                 Text("Task title")
                     .font(.title)
+                    .padding(8)
                 ZStack {
-                    RoundedRectangle(cornerRadius: 16)
+                    RoundedRectangle(cornerRadius: 40)
                         .fill(.mint)
                     Text("XXL")
                         .font(.title2)
-                        .padding(7)
+                        .padding(8)
+                        .foregroundColor(.white)
                 }
                 .fixedSize(horizontal: true, vertical: true)
             }
             Label("Task type", systemImage: "bookmark")
                 .font(.title2)
+                .foregroundColor(.gray)
+                .padding(3)
             }
         .padding(3)
         .background(.thickMaterial)
+        .fixedSize(horizontal: false, vertical: true)
         }
 
         
