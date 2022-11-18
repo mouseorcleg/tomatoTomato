@@ -10,32 +10,37 @@ import SwiftUI
 struct SingleTaskView: View {
     
     var body: some View {
-        VStack {
+        ZStack {
+            RoundedRectangle(cornerRadius: 10)
+                .fill(.thinMaterial)
             HStack{
+                //this needs to be a button
+                Image(systemName: "square")
+                    .font(.title2)
+                
+                //title from db
                 Text("Task title")
-                    .font(.title)
-                    .padding(8)
+                    .font(.title2)
+                    
+                    .padding(5)
                 ZStack {
                     RoundedRectangle(cornerRadius: 40)
                         .fill(.mint)
+                    
+                    // size from db
                     Text("XXL")
-                        .font(.title2)
-                        .padding(8)
+                        .fontWeight(.semibold)
+                        .padding(4)
                         .foregroundColor(.white)
                 }
                 .fixedSize(horizontal: true, vertical: true)
             }
-            Label("Task type", systemImage: "bookmark")
-                .font(.title2)
-                .foregroundColor(.gray)
-                .padding(3)
-            }
-        .padding(3)
-        .background(.thickMaterial)
-        .fixedSize(horizontal: false, vertical: true)
         }
-
+        .padding(3)
+        .fixedSize(horizontal: false, vertical: true)
         
+        
+        }
     }
 
 
