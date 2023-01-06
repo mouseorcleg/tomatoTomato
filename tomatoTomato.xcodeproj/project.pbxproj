@@ -15,6 +15,8 @@
 		CB3FF734290FF290007B3579 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = CB3FF733290FF290007B3579 /* GRDB */; };
 		CB3FF737291017FF007B3579 /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3FF736291017FF007B3579 /* AppDatabase.swift */; };
 		CB3FF73929103556007B3579 /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3FF73829103556007B3579 /* Persistance.swift */; };
+		CBAAC8B92927DA1300BDA8B5 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAAC8B82927DA1300BDA8B5 /* ContentViewModel.swift */; };
+		CBAAC8BB2927DA2C00BDA8B5 /* SingleTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAAC8BA2927DA2C00BDA8B5 /* SingleTaskView.swift */; };
 		CBE3813229265E6B003E5B5E /* NewTaskViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE3813129265E6B003E5B5E /* NewTaskViewContoller.swift */; };
 		CBE3813429267AA0003E5B5E /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE3813329267AA0003E5B5E /* ContentViewController.swift */; };
 		CBE3813629267CE1003E5B5E /* TypeAndSyzeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE3813529267CE1003E5B5E /* TypeAndSyzeModels.swift */; };
@@ -34,6 +36,8 @@
 		CB3686D228749E3600E1CFC4 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
 		CB3FF736291017FF007B3579 /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
 		CB3FF73829103556007B3579 /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
+		CBAAC8B82927DA1300BDA8B5 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		CBAAC8BA2927DA2C00BDA8B5 /* SingleTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTaskView.swift; sourceTree = "<group>"; };
 		CBE3813129265E6B003E5B5E /* NewTaskViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewContoller.swift; sourceTree = "<group>"; };
 		CBE3813329267AA0003E5B5E /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		CBE3813529267CE1003E5B5E /* TypeAndSyzeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAndSyzeModels.swift; sourceTree = "<group>"; };
@@ -79,12 +83,11 @@
 		CB3686BE28744AE200E1CFC4 /* tomatoTomato */ = {
 			isa = PBXGroup;
 			children = (
+				CBAAC8B72927D9DF00BDA8B5 /* Content */,
 				CBEC8B7729269AD0007BB344 /* NewTask */,
 				CB3FF735291017B4007B3579 /* Database */,
 				CBECACFE2895A89600160A4C /* Models */,
 				CB3686BF28744AE200E1CFC4 /* tomatoTomatoApp.swift */,
-				CB3686C128744AE200E1CFC4 /* ContentView.swift */,
-				CBE3813329267AA0003E5B5E /* ContentViewController.swift */,
 				CB3686C328744AEA00E1CFC4 /* Assets.xcassets */,
 				CB3686C528744AEA00E1CFC4 /* Preview Content */,
 			);
@@ -107,6 +110,17 @@
 				CBECAD022895A8FC00160A4C /* tomatoTaskDbModel.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		CBAAC8B72927D9DF00BDA8B5 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				CB3686C128744AE200E1CFC4 /* ContentView.swift */,
+				CBE3813329267AA0003E5B5E /* ContentViewController.swift */,
+				CBAAC8B82927DA1300BDA8B5 /* ContentViewModel.swift */,
+				CBAAC8BA2927DA2C00BDA8B5 /* SingleTaskView.swift */,
+			);
+			path = Content;
 			sourceTree = "<group>";
 		};
 		CBEC8B7729269AD0007BB344 /* NewTask */ = {
@@ -209,10 +223,12 @@
 				CBE3813829267DA6003E5B5E /* NewTaskViewModel.swift in Sources */,
 				CBE3813429267AA0003E5B5E /* ContentViewController.swift in Sources */,
 				CB3686D328749E3700E1CFC4 /* NewTaskView.swift in Sources */,
+				CBAAC8BB2927DA2C00BDA8B5 /* SingleTaskView.swift in Sources */,
 				CBE3813629267CE1003E5B5E /* TypeAndSyzeModels.swift in Sources */,
 				CBE3813229265E6B003E5B5E /* NewTaskViewContoller.swift in Sources */,
 				CB3686C228744AE200E1CFC4 /* ContentView.swift in Sources */,
 				CBECAD032895A8FC00160A4C /* tomatoTaskDbModel.swift in Sources */,
+				CBAAC8B92927DA1300BDA8B5 /* ContentViewModel.swift in Sources */,
 				CB3686C028744AE200E1CFC4 /* tomatoTomatoApp.swift in Sources */,
 				CB3FF737291017FF007B3579 /* AppDatabase.swift in Sources */,
 				CB3FF73929103556007B3579 /* Persistance.swift in Sources */,
